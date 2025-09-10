@@ -11,3 +11,11 @@ cp ~/Desktop/mydir1/myfile ~/Desktop/mydir1/mydir2/
 rm -r ~/Desktop/mydir1
 
 mv ~/Desktop/mydir2/myfile ~/Desktop/mydir2/mynewfile
+
+
+echo "Hello World" > ~/Desktop/mydir2/myfile
+
+mv ~/Desktop/mydir2/myfile ~/Desktop/mydir2/mynewfile
+
+ls ~/Desktop/mydir2
+
