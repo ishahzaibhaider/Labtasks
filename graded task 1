@@ -1,0 +1,18 @@
+# 1) Move myfile to mydir1
+mv "$HOME/Documents/mydir3/myfile" "$HOME/Desktop/mydir1/"
+
+# 2) Copy myfile to mydir2
+cp "$HOME/Desktop/mydir1/myfile" "$HOME/Desktop/mydir1/mydir2/"
+
+# 3) Copy mydir2 to Desktop (creates a copy mydir2_copy to avoid overwriting)
+cp -r "$HOME/Desktop/mydir1/mydir2" "$HOME/Desktop/mydir2_copy"
+
+# 4) Delete mydir1 (get confirmation before deleting)
+rm -ri "$HOME/Desktop/mydir1"
+# -i prompts before each remove; -r recurses. Answer 'y' to confirm each.
+
+# 5) Rename myfile to mynewfile (in its current directory)
+# If myfile is in ~/Desktop/mydir2:
+mv "$HOME/Desktop/mydir2/myfile" "$HOME/Desktop/mydir2/mynewfile"
+# Or if in mydir1:
+mv "$HOME/Desktop/mydir1/myfile" "$HOME/Desktop/mydir1/mynewfile"
