@@ -1,0 +1,13 @@
+~/Desktop/mydir1/mydir2/mydir3
+
+
+mv myfile ~/Desktop/mydir1/
+
+
+
+cp ~/Desktop/mydir1/myfile ~/Desktop/mydir1/mydir2/
+
+
+rm -r ~/Desktop/mydir1
+
+mv ~/Desktop/mydir2/myfile ~/Desktop/mydir2/mynewfile
