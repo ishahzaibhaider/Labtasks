@@ -1,0 +1,14 @@
+# go to Desktop
+cd "$HOME/Desktop"
+
+# write contents of mynewfile to newfile (overwrite or create)
+cat mydir2/mynewfile > newfile
+
+# view both outputs on screen
+echo "----- mynewfile -----"
+cat mydir2/mynewfile
+echo "----- newfile -----"
+cat newfile
+
+# write the combined output of mynewfile and newfile into a third file out-put-file
+cat mydir2/mynewfile newfile > out-put-file
