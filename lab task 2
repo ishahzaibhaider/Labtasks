@@ -1,0 +1,18 @@
+# go to Desktop (portable)
+cd ~/Desktop
+
+# create mydir1 and inside it mydir2
+mkdir -p mydir1/mydir2
+
+# change to mydir2 using absolute path
+cd "$HOME/Desktop/mydir1/mydir2"
+
+# change to Documents using relative path (assuming Desktop is under home)
+cd ../../Documents
+
+# create mydir3 in Documents and enter it
+mkdir -p mydir3
+cd mydir3
+
+# change back to mydir2 using relative path (from Documents/mydir3)
+cd ../Desktop/mydir1/mydir2 || cd "$HOME/Desktop/mydir1/mydir2"
