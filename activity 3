@@ -1,0 +1,15 @@
+# go to mydir3 (absolute)
+cd "$HOME/Documents/mydir3"
+
+# create an empty file using cat (and exit with Ctrl+D)
+cat > myfile
+# Type: Hello World
+# Press Ctrl+D to save
+
+# append "Hello World again" to myfile
+cat >> myfile
+# Type: Hello World again
+# Press Ctrl+D to finish
+
+# view contents
+cat myfile
