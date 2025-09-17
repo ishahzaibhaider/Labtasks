@@ -1,0 +1,38 @@
+# 1. Become superuser (needed to create folder in /)
+sudo -i
+
+# 2. Create directory /test
+mkdir /test
+
+# 3. Make it public (everyone can read, write, execute)
+chmod 777 /test
+
+# 4. Create file “testfile.txt” inside /test
+touch /test/testfile.txt
+
+# 5. Change permissions: only owner can read, nobody else can write
+chmod 400 /test/testfile.txt   # (r-------- for owner)
+
+# 6. Create another user “usama”
+adduser usama      # follow the prompts to set password etc.
+
+# 7. Switch to user usama
+su - usama
+
+# 8. Try to read the file (this should fail)
+cat /test/testfile.txt
+
+# 9. Exit back to ubuntu user
+exit
+
+# 10. Change permission so everyone can read, write, execute
+chmod 777 /test/testfile.txt
+
+# 11. Switch to usama again
+su - usama
+
+# 12. Now read the file (this should work)
+cat /test/testfile.txt
+
+# 13. Exit back
+exit
