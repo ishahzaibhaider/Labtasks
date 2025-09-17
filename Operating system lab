@@ -25,6 +25,41 @@ cat /test/testfile.txt
 # 9. Exit back to ubuntu user
 exit
 
+
+
+LAB 
+
+# 1. Make default permissions so new file readable only to owner
+umask 077   # (files created now will be rw------- by default)
+
+# 2. Create text file act.txt in /test
+touch /test/act.txt
+
+# 3. Switch to user usama
+su - usama
+
+# 4. Try to access act.txt (should fail)
+cat /test/act.txt
+
+# 5. Exit back
+exit
+
+# 6. Change ownership of act.txt to user usama
+sudo chown usama:usama /test/act.txt
+
+# 7. Switch to usama again
+su - usama
+
+# 8. Now read the file (should work)
+cat /test/act.txt
+
+# 9. Exit back
+exit
+
+# 10. Access act.txt with ubuntu user (should also work now)
+cat /test/act.txt
+
+
 # 10. Change permission so everyone can read, write, execute
 chmod 777 /test/testfile.txt
 
